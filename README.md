@@ -1,110 +1,32 @@
-<h1 align="center">Hola!!!👋 Como estas?</h1>
+# 👋 Hola, soy Fabrizio
 
-###
+💻 **Analista de Sistemas | Programador | Desarrollador de Soluciones Digitales**  
+Con experiencia en:  
+- Desarrollo de aplicaciones y automatización de procesos.  
+- Integración de sistemas y optimización de flujos de trabajo.  
+- Creación de herramientas personalizadas para empresas.  
+- Análisis y gestión de datos para la toma de decisiones.  
 
-<p align="left">Me llamo Fabrizio, soy Analista De Sistemas y soy de Argentina 🇦🇷.</p>
+---
 
-###
+## 💬 Sobre mí
+Hola, soy **Fabrizio**, Analista de Sistemas de Argentina 🇦🇷.  
+Me encanta **resolver problemas**, aprender tecnologías nuevas y encontrar maneras de que las cosas funcionen mejor.  
 
-<h2 align="left">Sobre mí</h2>
+💡 Me atraen los proyectos que mezclan **creatividad + lógica**, y creo que la mejor forma de crecer es **compartiendo lo que uno sabe y aprendiendo de los demás**.
 
-Soy un **Analista de Sistemas** con experiencia en desarrollo web, bases de datos y SEO. Me apasiona trabajar en proyectos que combinan tecnología y creatividad, y siempre estoy buscando aprender cosas nuevas.
+---
 
-### 🎯 Proyectos
+## 🎯 Objetivo profesional
+📌 Continuar expandiendo mis conocimientos y experiencia, aportando soluciones efectivas,
+dejando una marca positiva en cada proyecto y trabajando junto a los mejores.
 
-- Trabajo en proyectos como la creación de sitios web con funcionalidades interactivas y chatbots.
-- Diseño, modelo y optimizo bases de datos desde cero, adaptándolas a las necesidades específicas de cada proyecto.
-- Gestiono cursos en plataformas como Udemy, Eventbrite y Teachable, aplicando técnicas de SEO, etiquetas y palabras clave para aumentar el tráfico y mejorar la experiencia del usuario.
+---
 
-### 📚 Habilidades Técnicas
+## 🛠 Tecnologías y Herramientas
+<p align="center"> <img src="https://skillicons.dev/icons?i=cs,html,css,js,python,mysql,docker,linux" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="48" height="48" title="Google Apps Script" /> </p>
 
-#### 
-- Lenguajes de Programación: C#, Java, SQL, HTML, CSS, PHP, JavaScript
+---
 
-####
-- IDE y Editores de Código: Microsoft Visual Studio, Visual Studio Code, Eclipse
-
-####
-- Bases de Datos: Oracle MySQL, Microsoft SQL Server
-
-####
-- Sistemas de Control de Versiones: GitHub, GitLab
-
-####
-- Contenedorización: Docker
-
-####
-- Automatización y Scripting: Microsoft PowerShell, Terminal de Ubuntu, Bash
-
-####
-- Herramientas de Gestión de Proyectos: Atlassian Jira
-
-####
-- Frameworks y Librerías: Xamarin, React
-
-### 📊 Estadísticas de GitHub
-
-![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=FabrizioMinardo&layout=compact&theme=dark)
-
-### 🏆 Logros y Certificaciones
-
-- **ESBA:** Tecnico Superior en Analisis De Sistemas.
-- **Coderhouse:** SQL y Administración de Bases de Datos.
-
-###
-
-### 🎮 Hobbies e Intereses
-
-- 🎵 Música: Me encanta escuchar baladas mientras programo.
-- 🎮 Videojuegos: Fanático de los juegos de deporte.
-- 🏋️‍♂️ Fitness: Me gusta mantenerme activo y jugar al futbol ⚽.
-- 📚 Aprendizaje continuo: Siempre estoy aprendiendo algo nuevo, ya sea tecnología o temas de interés personal.
-
-<h2 align="left">Trabajo con</h2>
-
-
-<div align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="40" alt="csharp logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" height="40" alt="microsoftsqlserver logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" height="40" alt="docker logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" alt="php logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg" height="40" alt="xamarin logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
-</div>
-
-###
-
-<h2 align="left">Contacto</h2>
-
-###
-
-<div align="left">
-  <a href="https://www.linkedin.com/in/fabrizio-minardo-programador/" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
-  </a>
-  <a href="https://mailto:minardofabrizio@gmail.com" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="52" height="40" alt="gmail logo"  />
-  </a>
-  <a href="https://wa.me/1128829272" target="_blank">
-    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/whatsapp/default.svg" width="52" height="40" alt="whatsapp logo"  />
-  </a>
-</div>
-
-###
+## 📬 Contacto
+<p align="center"> <a href="mailto:fabriziominardo@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="40" height="40" alt="Email"></a> &nbsp; <a href="https://www.linkedin.com/in/fabrizio-minardo-programador/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40" height="40" alt="LinkedIn"></a> &nbsp; <a href="https://wa.me/1128829272"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="40" height="40" alt="WhatsApp"></a> </p>
