@@ -562,6 +562,18 @@ header {
   transform: none;
 }
 
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  text-align: center;
+  color: #475569;
+  font-size: 1rem;
+  user-select: text;
+  box-sizing: border-box;
+}
+
+
 @media (max-width: 1100px) {
   body {
     padding: 20px 24px 80px;
@@ -572,51 +584,52 @@ header {
 }
 
 @media (max-width: 768px) {
-  /* Nav drawer & hamburger */
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -320px;
+    right: -280px; /* reduce para que quede más cerca */
     flex-direction: column;
     background: #003575;
-    width: 320px;
+    width: 280px; /* ancho menor para que no ocupe tanto */
+    max-width: 90vw; /* adaptable a la pantalla */
     height: calc(100vh - 70px);
-    padding: 40px 28px 20px;
+    padding: 30px 20px 20px; /* menos padding para espacio */
     border-left: 5px solid #2563eb;
     box-shadow: -6px 0 30px rgba(0, 53, 117, 0.55);
     transition: right 0.3s ease;
-    gap: 28px;
-    border-radius: 0 0 0 30px;
+    gap: 24px;
+    border-radius: 0 0 0 20px;
     overflow-y: auto;
     z-index: 1300;
   }
+
   .nav-links.nav-active {
     right: 0;
   }
-  #nav-toggle {
-    display: flex;
-  }
+
   .nav-links li a {
-    font-size: 1.2rem;
-    padding: 16px 24px;
-    border-radius: 20px;
+    font-size: 1.15rem;
+    padding: 14px 20px;
+    border-radius: 18px;
     white-space: normal;
     max-width: 100%;
     word-break: break-word;
   }
 
-  /* Mostrar GitHub link dentro del menú móvil */
+  /* Ajustar GitHub link dentro menú móvil */
   .github-link {
     display: flex !important;
     margin-left: 0;
     margin-top: 12px;
     justify-content: center;
     gap: 8px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 10px 0;
     border-top: 1px solid #2563eb;
     width: 100%;
+    box-sizing: border-box;
   }
+}
 
   /* About: vertical */
   .about-container {
