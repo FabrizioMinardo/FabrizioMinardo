@@ -24,6 +24,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* ============================
@@ -41,7 +43,8 @@ nav {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
@@ -145,7 +148,7 @@ nav {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1111;
+  z-index: 1112; /* encima de todo */
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
@@ -176,9 +179,11 @@ nav {
 ============================ */
 .content-container {
   max-width: 1100px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px 40px 80px;
+  padding: 20px 5vw 80px; /* padding lateral relativo */
   flex: 1;
+  box-sizing: border-box;
 }
 
 /* ============================
@@ -432,68 +437,68 @@ footer {
 /* ============================
    MENÚ DESPLEGABLE MÓVIL
 ============================ */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -320px; /* menú oculto por defecto */
+    right: 0;
+    transform: translateX(100%);
     height: calc(100vh - 70px);
-    width: 280px;
-    max-width: 85vw;
+    width: 80vw;
+    max-width: 280px;
     background: #ffffff;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     padding: 2rem 0;
     gap: 0;
-    transition: right 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-    z-index: 1111; /* mayor que overlay */
+    z-index: 1111;
     overflow-y: auto;
-    pointer-events: auto; /* asegurar que recibe clicks */
+    pointer-events: none;
+    opacity: 0;
+    box-sizing: border-box;
   }
 
   .nav-links.active {
-    right: 0;
-  }
-
-  /* Overlay que cubre TODO excepto el menú */
-  .nav-overlay {
-    display: none;
-    position: fixed;
-    top: 70px;
-    left: 0;
-    height: calc(100vh - 70px);
-    width: calc(100% - 280px); /* cubre todo menos ancho menú */
-    background: rgba(255, 255, 255, 0.7); /* fondo blanco semi */
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: none; /* opcional: quitar blur para Edge */
-    z-index: 1110; /* justo debajo del menú */
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-  }
-
-  .nav-overlay.active {
-    display: block;
-    pointer-events: auto; /* permite clics para cerrar menú */
+    transform: translateX(0);
+    pointer-events: auto;
     opacity: 1;
   }
 
-  /* Opcional: si quieres el blur solo en Chrome, puedes usar un @supports */
-  @supports ((-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px))) {
-    .nav-overlay.active {
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
-    }
+  .nav-overlay {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: block;
   }
 
-  /* Otros estilos móviles siguen igual */
+  .nav-overlay.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
   .nav-links li {
     width: 100%;
   }
 
   .nav-links a {
+    box-sizing: border-box;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
     display: block;
+    text-overflow: ellipsis;
     padding: 1rem 2rem;
     border-radius: 0;
     border-bottom: 1px solid #e2e8f0;
@@ -529,20 +534,38 @@ footer {
     color: #2563eb;
   }
 
-  /* Botón hamburguesa */
   .nav-toggle {
     display: flex;
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1112; /* encima del menú y overlay */
+    z-index: 1112;
+  }
+
+  /* Asegurar que el contenido no desborde */
+  .content-container {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 /* En desktop no mostrar overlay */
-@media (min-width: 769px) {
+@media (min-width: 481px) {
   .nav-overlay {
     display: none !important;
   }
+}
+
+/* Asegurar que no haya scroll horizontal */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Asegurar que las imágenes no causen desbordamiento */
+img, svg, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
