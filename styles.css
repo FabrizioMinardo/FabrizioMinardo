@@ -27,7 +27,7 @@ body {
 }
 
 /* ============================
-   NAVIGATION MEJORADA
+   NAVIGATION MEJORADA - REVISADO
 ============================ */
 nav {
   position: sticky;
@@ -36,8 +36,8 @@ nav {
   background: linear-gradient(135deg, #002a5c 0%, #003575 100%);
   box-shadow: 0 4px 20px rgba(0, 42, 92, 0.3);
   z-index: 1100;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
 }
 
 .nav-container {
@@ -48,6 +48,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  position: relative;
+  z-index: 1110;
 }
 
 .logo {
@@ -55,8 +57,10 @@ nav {
   font-size: 1.5rem;
   color: #ffffff;
   letter-spacing: 1px;
-  transition: transform 0.3s ease;
   cursor: pointer;
+  -webkit-user-select: none; 
+  user-select: none;
+  transition: transform 0.3s ease;
 }
 
 .logo:hover {
@@ -70,8 +74,17 @@ nav {
   gap: 2rem;
   margin: 0;
   padding: 0;
+  pointer-events: auto;
+  position: static;
+  background: transparent;
+  height: auto;
+  width: auto;
+  flex-direction: row;
+  transition: none;
+  box-shadow: none;
 }
 
+/* Estilos para links en desktop */
 .nav-links a {
   color: #e2e8f0;
   text-decoration: none;
@@ -124,6 +137,7 @@ nav {
   fill: currentColor;
 }
 
+/* BOTÓN HAMBURGUESA - NAV TOGGLE */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -131,7 +145,7 @@ nav {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1103;
+  z-index: 1111;
   position: relative;
   -webkit-tap-highlight-color: transparent;
 }
@@ -416,31 +430,30 @@ footer {
 }
 
 /* ============================
-   RESPONSIVE DESIGN
+   MENÚ DESPLEGABLE MÓVIL
 ============================ */
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -100%;
+    right: -320px; /* fuera de pantalla */
     height: calc(100vh - 70px);
     width: 280px;
     max-width: 85vw;
-    background: linear-gradient(180deg, #003575 0%, #002a5c 100%);
+    background: #ffffff; /* fondo blanco para mejor legibilidad */
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
     padding: 2rem 0;
     gap: 0;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
-    z-index: 1102;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1110;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links.active {
-    right: 0;
+    right: 0; /* se despliega visible */
   }
 
   .nav-links li {
@@ -451,15 +464,24 @@ footer {
     display: block;
     padding: 1rem 2rem;
     border-radius: 0;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+    border-bottom: 1px solid #e2e8f0;
     font-size: 1.1rem;
+    color: #1e293b; /* texto oscuro para fondo blanco */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+    transform: none;
   }
 
   .github-link {
     margin-left: 0;
     padding-left: 0;
     border-left: none;
-    border-top: 2px solid rgba(37, 99, 235, 0.3);
+    border-top: 2px solid #2563eb;
     margin-top: 1rem;
     padding-top: 1rem;
   }
@@ -468,16 +490,20 @@ footer {
     justify-content: center;
     gap: 12px;
     border-bottom: none;
+    color: #1e293b;
   }
 
+  .github-link a:hover {
+    color: #2563eb;
+  }
+
+  /* Mostrar botón hamburguesa */
   .nav-toggle {
     display: flex;
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1103;
-    -webkit-tap-highlight-color: transparent;
   }
 
   .content-container {
@@ -524,50 +550,28 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
-  .nav-container {
-    padding: 0 1rem;
-    position: relative;
-  }
-
-  .logo {
-    font-size: 1.3rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .tagline {
-    font-size: 1.1rem;
-  }
-
-  .about-text {
-    font-size: 1rem;
-  }
-
-  .project-card {
-    padding: 20px;
-  }
-}
-
-/* Overlay para cerrar menú móvil */
-.nav-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1101;
-  -webkit-tap-highlight-color: transparent;
-}
-
 .nav-overlay.active {
   display: block;
+  pointer-events: auto;
 }
 
+/* Asegura que el menú no queda "dentro" del overlay visualmente y que no se bloquee */
+.nav-links {
+  position: fixed; /* ya lo tienes */
+  z-index: 1110; /* mayor que overlay */
+}
+
+/* Para que el overlay no bloquee el menú, agrega esto */
+.nav-overlay.active {
+  pointer-events: auto;
+}
+
+/* Añade a .nav-links para que acepte clics incluso si overlay está activo */
+.nav-links {
+  pointer-events: auto; 
+}
+
+/* En desktop no mostrar overlay */
 @media (min-width: 769px) {
   .nav-overlay {
     display: none !important;
