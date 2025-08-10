@@ -6,262 +6,223 @@
   <title>Fabrizio Minardo - Portfolio IT</title>
 
   <!-- Favicon SVG centrado "FM" -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMu b3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiMwMDM0NzYiIHJ4PSIxMiIvPgogIDx0 ZXh0IHg9IjMyIiB5PSI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlBvcHBpbiwgU2Fucy1TZXJpZiIgZm9udC1za XplPSIzMiIgc3R5bGU9ImZpbGw6IHdoaXRlOyBmb250LXdlaWdodDogNzAwOyI+Rk08L3RleHQ+Cjwvc3ZnPgo=" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiMwMDM0NzYiIHJ4PSIxMiIvPgogIDx0ZXh0IHg9IjMyIiB5PSI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IlBvcHBpbiwgU2Fucy1TZXJpZiIgZm9udC1zaXplPSIzMiIgc3R5bGU9ImZpbGw6IHdoaXRlOyBmb250LXdlaWdodDogNzAwOyI+Rk08L3RleHQ+Cjwvc3ZnPgo=" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
-
+  
+  <!-- Enlazar el archivo CSS corregido -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav>
-  <div class="nav-container">
-    <div class="logo">Fabrizio Minardo</div>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Fabrizio Minardo</div>
 
-    <div class="nav-links-container">
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">Sobre mí</a></li>
         <li><a href="#projects">Proyectos</a></li>
         <li><a href="#skills">Habilidades</a></li>
         <li><a href="#contact">Contacto</a></li>
-
-        <!-- GitHub solo dentro del menú -->
         <li class="github-link">
-          <a
-            href="https://github.com/FabrizioMinardo"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub de Fabrizio Minardo"
-          >
-            <svg
-              height="28"
-              width="28"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              aria-hidden="true"
-              focusable="false"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 
-                2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
-                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49
-                -2.69-.94-.09-.23-.48-.94-.82-1.13-.28
-                -.15-.68-.52-.01-.53.63-.01 1.08.58 
-                1.23.82.72 1.21 1.87.87 2.33.66.07
-                -.52.28-.87.51-1.07-1.78-.2-3.64
-                -.89-3.64-3.95 0-.87.31-1.59.82
-                -2.15-.08-.2-.36-1.02.08-2.12 
-                0 0 .67-.21 2.2.82a7.64 7.64 0 
-                012 0c1.53-1.04 2.2-.82 2.2
-                -.82.44 1.1.16 1.92.08 2.12.51
-                .56.82 1.27.82 2.15 0 3.07-1.87
-                3.75-3.65 3.95.29.25.54.73.54
-                1.48 0 1.07-.01 1.93-.01 2.2 
-                0 .21.15.46.55.38A8.013 8.013 
-                0 0016 8c0-4.42-3.58-8-8-8z"
-              />
+          <a href="https://github.com/FabrizioMinardo" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Fabrizio Minardo">
+            <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.64 7.64 0 012 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
             </svg>
+            <span>GitHub</span>
           </a>
         </li>
       </ul>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+  </nav>
 
-    <button id="nav-toggle" aria-label="Abrir menú de navegación">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</nav>
+  <div class="nav-overlay" id="nav-overlay"></div>
 
-  <header>
-    <h1>Fabrizio Minardo</h1>
-    <p class="tagline">Transformando ideas en soluciones digitales eficientes y creativas</p>
-  </header>
+  <div class="content-container">
+    <header>
+      <h1>Fabrizio Minardo</h1>
+      <p class="tagline">Transformando ideas en soluciones digitales eficientes y creativas</p>
+    </header>
 
-  <main>
-    <section id="about" class="container">
-      <h2>Sobre mí</h2>
-      <div class="about-container">
-        <img src="foto cv.png" alt="Foto de Fabrizio Minardo" class="profile-pic" />
-        <div class="about-text">
-          <p>
-            <strong>Hola, soy Fabrizio Minardo</strong>, Analista de Sistemas apasionado por crear soluciones digitales que realmente funcionen y simplifiquen procesos.
-            Me encanta resolver problemas complejos, aprender tecnologías nuevas y combinar creatividad con lógica para generar valor real.
-          </p>
-          <p>
-            A lo largo de mi carrera, desarrollé aplicaciones, optimicé flujos de trabajo e integré sistemas, siempre enfocándome en las necesidades reales del usuario.
-            También mejoré la visibilidad digital aplicando SEO y profundizando en la psicología del usuario.
-          </p>
-          <p>
-            Creo que el crecimiento profesional nace de compartir conocimiento y colaborar en equipo.
-            Por eso, busco proyectos que fomenten la innovación y el aprendizaje constante.
-          </p>
+    <main>
+      <section id="about" class="container">
+        <h2>Sobre mí</h2>
+        <div class="about-container">
+          <img src="foto cv.png" alt="Foto de Fabrizio Minardo" class="profile-pic" />
+          <div class="about-text">
+            <p>
+              <strong>Hola, soy Fabrizio Minardo</strong>, Analista de Sistemas apasionado por crear soluciones digitales que realmente funcionen y simplifiquen procesos.
+              Me encanta resolver problemas complejos, aprender tecnologías nuevas y combinar creatividad con lógica para generar valor real.
+            </p>
+            <p>
+              A lo largo de mi carrera, desarrollé aplicaciones, optimicé flujos de trabajo e integré sistemas, siempre enfocándome en las necesidades reales del usuario.
+              También mejoré la visibilidad digital aplicando SEO y profundizando en la psicología del usuario.
+            </p>
+            <p>
+              Creo que el crecimiento profesional nace de compartir conocimiento y colaborar en equipo.
+              Por eso, busco proyectos que fomenten la innovación y el aprendizaje constante.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="projects" class="container">
-      <h2>Proyectos Destacados</h2>
-      <div class="projects-grid">
+      <section id="projects" class="container">
+        <h2>Proyectos Destacados</h2>
+        <div class="projects-grid">
 
-        <article class="project-card">
-          <h3>UGAB – Sistema para Restaurante Armenio</h3>
-          <p class="project-desc">
-            Plataforma web para un restaurante con 30+ años y hasta 800 comensales por fin de semana.  
-            Facilita la atención directa desde la mesa mediante QR, pide la cuenta y deja opiniones, con integración a Telegram para notificaciones instantáneas.
-          </p>
-          <ul class="project-details">
-            <li><strong>Tecnologías:</strong> JavaScript, HTML, CSS, Telegram Bot API</li>
-            <li><strong>Rol:</strong> Desarrollo fullstack e integración</li>
-            <li><strong>Impacto:</strong> Mejoró la atención y redujo tiempos de espera.</li>
-            <li><strong>Beneficio extra:</strong> Incrementó la fidelización de clientes y se redujeron gastos operativos.</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://fabriziominardo.github.io/ugab/?table=125" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Demo</a>  
-            <a href="https://github.com/FabrizioMinardo/ugab" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Código</a>
-          </p>
-        </article>
+          <article class="project-card">
+            <h3>UGAB – Sistema para Restaurante Armenio</h3>
+            <p class="project-desc">
+              Plataforma web para un restaurante con 30+ años y hasta 800 comensales por fin de semana.  
+              Facilita la atención directa desde la mesa mediante QR, pide la cuenta y deja opiniones, con integración a Telegram para notificaciones instantáneas.
+            </p>
+            <ul class="project-details">
+              <li><strong>Tecnologías:</strong> JavaScript, HTML, CSS, Telegram Bot API</li>
+              <li><strong>Rol:</strong> Desarrollo fullstack e integración</li>
+              <li><strong>Impacto:</strong> Mejoró la atención y redujo tiempos de espera.</li>
+              <li><strong>Beneficio extra:</strong> Incrementó la fidelización de clientes y se redujeron gastos operativos.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://fabriziominardo.github.io/ugab/?table=125" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Demo</a>  
+              <a href="https://github.com/FabrizioMinardo/ugab" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Código</a>
+            </p>
+          </article>
 
-        <article class="project-card">
-          <h3>Get Waiter</h3>
-          <p class="project-desc">
-            Sistema integral para restaurantes que automatiza pedidos, cuentas y reseñas, además de recopilar estadísticas claves para mejorar la atención.
-          </p>
-          <ul class="project-details">
-            <li><strong>Tecnologías:</strong> JavaScript, HTML, CSS, Google Apps Script, Telegram Bot API, Google Sheets</li>
-            <li><strong>Rol:</strong> Desarrollo frontend y backend con integración a hojas de cálculo</li>
-            <li><strong>Impacto:</strong> Mejor control y seguimiento de solicitudes, historial de interacciones, promedio diario, semanal y mensual.</li>
-            <li><strong>Funciones clave:</strong> Identifica horas pico y facilita estadísticas para optimizar recursos.</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://fabriziominardo.github.io/GetWaiter/?table=180" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Demo</a>  
-            <a href="https://github.com/FabrizioMinardo/GetWaiter" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Código</a>
-          </p>
-        </article>
+          <article class="project-card">
+            <h3>Get Waiter</h3>
+            <p class="project-desc">
+              Sistema integral para restaurantes que automatiza pedidos, cuentas y reseñas, además de recopilar estadísticas claves para mejorar la atención.
+            </p>
+            <ul class="project-details">
+              <li><strong>Tecnologías:</strong> JavaScript, HTML, CSS, Google Apps Script, Telegram Bot API, Google Sheets</li>
+              <li><strong>Rol:</strong> Desarrollo frontend y backend con integración a hojas de cálculo</li>
+              <li><strong>Impacto:</strong> Mejor control y seguimiento de solicitudes, historial de interacciones, promedio diario, semanal y mensual.</li>
+              <li><strong>Funciones clave:</strong> Identifica horas pico y facilita estadísticas para optimizar recursos y personal del restaurante.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://fabriziominardo.github.io/GetWaiter/?table=180" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Demo</a>  
+              <a href="https://github.com/FabrizioMinardo/GetWaiter" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Código</a>
+            </p>
+          </article>
 
-        <article class="project-card">
-          <h3>TuFut</h3>
-          <p class="project-desc">
-            Sistema de gestión para un club que permite administrar reservas, pagos y miembros de manera segura y eficiente. Se eliminaron los errores de duplicación y falta de registros. Se aglizó el proceso de reservas y se automatizó el flujo de trabajo. Se registró y gestionó los pagos de manera correcta.
-          </p>
-          <ul class="project-details">
-            <li><strong>Tecnologías:</strong> MySQL, Docker, PHP</li>
-            <li><strong>Rol:</strong> Desarrollo backend y gestión de base de datos</li>
-            <li><strong>Impacto:</strong> Simplificó la administración del club y mejoró la experiencia del usuario</li>
-          </ul>
-          <p class="project-links">
-            <a href="https://github.com/FabrizioMinardo/TuFut" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Código</a>
-          </p>
-        </article>
-      </div>
-    </section>
+          <article class="project-card">
+            <h3>TuFut</h3>
+            <p class="project-desc">
+              Sistema de gestión para un club que permite administrar reservas, pagos y miembros de manera segura y eficiente. Se eliminaron los errores de duplicación y falta de registros. Se aglizó el proceso de reservas y se automatizó el flujo de trabajo. Se registró y gestionó los pagos de manera correcta.
+            </p>
+            <ul class="project-details">
+              <li><strong>Tecnologías:</strong> MySQL, Docker, PHP</li>
+              <li><strong>Rol:</strong> Desarrollo backend, administración de base de datos. </li>
+              <li><strong>Impacto:</strong> Simplificó la administración del club y mejoró la experiencia del usuario</li>
+              <li><strong>Funciones clave:</strong> Se logró una buena administración de reservas y pagos.</li>
+            </ul>
+            <p class="project-links">
+              <a href="https://github.com/FabrizioMinardo/TuFut" target="_blank" rel="noopener noreferrer" class="btn-link">Ver Código</a>
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <section id="seo" class="container">
-      <h2>Proyectos y Servicios Complementarios</h2>
-      <p>Además de desarrollo, brindo consultoría en:</p>
-      <ul class="seo-services">
-        <li>Optimización y auditorías SEO para mejorar la visibilidad orgánica y posicionamiento web.</li>
-        <li>Diagnóstico y corrección de errores técnicos en sitios y sistemas digitales.</li>
-        <li>Estrategias personalizadas para potenciar la presencia online y captar más clientes.</li>
-        <li>Automatización de procesos administrativos y análisis de datos para aumentar eficiencia.</li>
-      </ul>
-    </section>
-
-    <section id="experience" class="container">
-      <h2>Experiencia Profesional</h2>
-      <ul class="experience-list">
-        <li><strong>Consultor Digital</strong> — Centro Ten Wan, Remoto (dic 2024 - actualidad)</li>
-        <li><strong>Community Manager</strong> — Odontología NK Estudio Dental, Buenos Aires (mar 2023 - actualidad)</li>
-        <li><strong>Consultoría IT Freelance</strong> — Desarrollo apps, bases de datos, SEO (ene 2023 - actualidad)</li>
-        <li><strong>Especialista en E-commerce y Soporte IT</strong> — Distribuidora DILER, Buenos Aires (jun 2023 - actualidad)</li>
-        <li><strong>Responsable Comercial</strong> — Veterinaria Gloria, Buenos Aires (jul 2019 - may 2023)</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="container">
-      <h2>Habilidades Técnicas</h2>
-
-      <div class="skills-category">
-        <h3>Lenguajes y Frameworks</h3>
-        <ul class="skills-list">
-          <li>C#</li>
-          <li>Java</li>
-          <li>PHP</li>
-          <li>HTML / CSS / JavaScript</li>
-          <li>Xamarin</li>
-          <li>React</li>
+      <section id="seo" class="container">
+        <h2>Proyectos y Servicios Complementarios</h2>
+        <p>Además de desarrollo, brindo consultoría en:</p>
+        <ul class="seo-services">
+          <li>Optimización y auditorías SEO para mejorar la visibilidad orgánica y posicionamiento web.</li>
+          <li>Diagnóstico y corrección de errores técnicos en sitios y sistemas digitales.</li>
+          <li>Estrategias personalizadas para potenciar la presencia online y captar más clientes.</li>
+          <li>Automatización de procesos administrativos y análisis de datos para aumentar eficiencia.</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="skills-category">
-        <h3>Bases de Datos y Herramientas</h3>
-        <ul class="skills-list">
-          <li>MySQL</li>
-          <li>Visual Studio</li>
-          <li>Docker</li>
-          <li>VS Code</li>
-          <li>Jira</li>
-          <li>Asana</li>
-          <li>SQL Server</li>
-          <li>GitHub</li>
-          <li>Oracle</li>
-          <li>Eclipse</li>
+      <section id="experience" class="container">
+        <h2>Experiencia Profesional</h2>
+        <ul class="experience-list">
+          <li><strong>Consultor Digital</strong> — Centro Ten Wan, Remoto (dic 2024 - actualidad)</li>
+          <li><strong>Community Manager</strong> — Odontología NK Estudio Dental, Buenos Aires (mar 2023 - actualidad)</li>
+          <li><strong>Consultoría IT Freelance</strong> — Desarrollo apps, bases de datos, SEO (ene 2023 - actualidad)</li>
+          <li><strong>Especialista en E-commerce y Soporte IT</strong> — Distribuidora DILER, Buenos Aires (jun 2023 - actualidad)</li>
+          <li><strong>Responsable Comercial</strong> — Veterinaria Gloria, Buenos Aires (jul 2019 - may 2023)</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="skills-category">
-        <h3>Automatización y Marketing Digital</h3>
-        <ul class="skills-list">
-          <li>Google Apps Script</li>
-          <li>Bash</li>
-          <li>SEO</li>
-          <li>Google My Business</li>
-          <li>Meta Business Suite</li>
-          <li>Google Trends</li>
-          <li>Linux Subsystem for Windows</li>
-          <li>Triggers</li>
-          <li>Análisis de Métricas</li>
-        </ul>
-      </div>
-    </section>
+      <section id="skills" class="container">
+        <h2>Habilidades Técnicas</h2>
 
-    <section id="contact" class="container">
-  <h2>Contacto</h2>
-  <div class="contact-cards">
-    <a href="mailto:minardofabrizio@gmail.com" class="contact-card" aria-label="Enviar email">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email icon" />
-      <span>Gmail</span>
-    </a>
-    <a href="https://www.linkedin.com/in/fabrizio-minardo-programador/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="LinkedIn de Fabrizio">
-      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
-      <span>LinkedIn</span>
-    </a>
-     </a>
-        <a href="https://wa.me/1128829272" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="WhatsApp de Fabrizio">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp icon" />
-          <span>WhatsApp</span>
-        </a>
+        <div class="skills-category">
+          <h3>Lenguajes y Frameworks</h3>
+          <ul class="skills-list">
+            <li>C#</li>
+            <li>Java</li>
+            <li>PHP</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>Xamarin</li>
+            <li>React</li>
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <h3>Bases de Datos y Herramientas</h3>
+          <ul class="skills-list">
+            <li>MySQL</li>
+            <li>Visual Studio</li>
+            <li>Docker</li>
+            <li>VS Code</li>
+            <li>Jira</li>
+            <li>Asana</li>
+            <li>SQL Server</li>
+            <li>GitHub</li>
+            <li>Oracle</li>
+            <li>Eclipse</li>
+          </ul>
+        </div>
+
+        <div class="skills-category">
+          <h3>Automatización y Marketing Digital</h3>
+          <ul class="skills-list">
+            <li>Google Apps Script</li>
+            <li>Bash</li>
+            <li>SEO</li>
+            <li>Google My Business</li>
+            <li>Meta Business Suite</li>
+            <li>Google Trends</li>
+            <li>Linux Subsystem for Windows</li>
+            <li>Triggers</li>
+            <li>Análisis de Métricas</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="container">
+        <h2>Contacto</h2>
+        <div class="contact-cards">
+          <a href="mailto:minardofabrizio@gmail.com" class="contact-card" aria-label="Enviar email">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email icon" />
+            <span>Gmail</span>
+          </a>
+          <a href="https://www.linkedin.com/in/fabrizio-minardo-programador/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="LinkedIn de Fabrizio">
+            <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://wa.me/1128829272" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="WhatsApp de Fabrizio">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp icon" />
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
   </div>
-</section>
-
-  </main>
 
   <footer>
     <p>© 2025 Fabrizio Minardo. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    // Menu toggle para móvil
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-active');
-      navToggle.classList.toggle('active');
-    });
-  </script>
+  
+  <script src="Script.js" defer></script>
 </body>
 </html>

@@ -21,14 +21,148 @@ body {
   background-color: #f8fafc;
   color: #1e293b;
   line-height: 1.6;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 40px 80px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  -webkit-user-select: none; /* Safari 3+, iOS 3+ */
-  user-select: none;
+}
+
+/* ============================
+   NAVIGATION MEJORADA
+============================ */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #002a5c 0%, #003575 100%);
+  box-shadow: 0 4px 20px rgba(0, 42, 92, 0.3);
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(37, 99, 235, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::before {
+  left: 100%;
+}
+
+.github-link {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(226, 232, 240, 0.3);
+}
+
+.github-link a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.github-link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ============================
+   CONTENT CONTAINER
+============================ */
+.content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 40px 80px;
+  flex: 1;
 }
 
 /* ============================
@@ -39,8 +173,6 @@ h1, h2, h3 {
   color: #0f172a;
   margin-bottom: 0.4em;
   line-height: 1.2;
-  -webkit-user-select: text;
-  user-select: text;
 }
 
 h1 {
@@ -65,199 +197,20 @@ a {
   color: #2563eb;
   text-decoration: none;
   transition: color 0.3s ease;
-  cursor: pointer;
-  white-space: nowrap;
 }
 
 a:hover,
 a:focus {
   color: #1e40af;
-  outline: none;
-}
-
-/* --- Ajustes principales nav --- */
-nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: #002a5c;
-  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
-  z-index: 1200;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-}
-
-.nav-container {
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo */
-.logo {
-  font-weight: 900;
-  font-size: 1.6rem; /* reducido un poco */
-  color: #dbeafe;
-  letter-spacing: 1.2px;
-  font-style: italic;
-  white-space: nowrap;
-}
-
-/* --- Links nav escritorio --- */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-}
-
-.nav-links li a {
-  font-weight: 600;
-  color: #dbeafe;
-  padding: 10px 14px;
-  border-radius: 10px;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-}
-
-.nav-links li a:hover {
-  background-color: #2563eb;
-  color: white;
-}
-
-/* Botón hamburguesa */
-#nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 26px; /* más pequeño */
-  height: 20px; /* más bajo */
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-#nav-toggle span {
-  width: 100%;
-  height: 3px; /* más fino */
-  background: #dbeafe;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Animación del botón */
-#nav-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(4px, 4px);
-}
-#nav-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-#nav-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -4px);
-}
-/* GitHub link */
-.github-link {
-  color: #dbeafe;
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  transition: color 0.3s ease, transform 0.2s ease;
-  font-size: 1.3rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.github-link svg {
-  fill: currentColor;
-  width: 28px;
-  height: 28px;
-  pointer-events: none;
-}
-
-/* Hover GitHub */
-.github-link:hover,
-.github-link:focus {
-  color: #2563eb;
-  transform: scale(1.1);
-  outline: none;
-}
-
-/* MEDIA QUERIES */
-
-/* Móvil */
-@media (max-width: 768px) {
-  /* Mostramos hamburguesa */
-  #nav-toggle {
-    display: flex;
-  }
-
-  /* Menú móvil */
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    right: -100%; /* fuera de pantalla */
-    flex-direction: column;
-    gap: 12px;
-    background: #002a5c;
-    width: 260px;
-    height: calc(100vh - 70px);
-    padding: 30px 20px;
-    box-shadow: -4px 0 12px rgba(0,0,0,0.2);
-    transition: right 0.3s ease-in-out;
-    overflow-y: auto;
-  }
-
-  .nav-links.nav-active {
-    right: 0; /* entra desde la derecha */
-  }
-
-  /* Links más grandes en móvil */
-  .nav-links li a {
-    font-size: 1.1rem;
-    padding: 12px;
-    display: block;
-  }
-}
-  /* Ajusta tamaño y padding de enlaces para que no queden apretados */
-  .nav-links li a {
-    font-size: 1.2rem;
-    padding: 16px 28px; /* un poco más de padding horizontal */
-    border-radius: 20px;
-    white-space: normal;
-    max-width: 100%;
-    word-break: break-word;
-  }
-
-  /* GitHub visible y bien posicionado en menú móvil */
-   .github-link {
-    display: block;
-  }
-  .github-link a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
-  .github-link svg {
-    width: 28px;
-    height: 28px;
-  }
 }
 
 /* ============================
-   HEADER / SOBRE MÍ
+   HEADER
 ============================ */
 header {
   text-align: center;
   margin: 48px 0 40px;
   color: #0f172a;
-  -webkit-user-select: text;
-  user-select: text;
 }
 
 .tagline {
@@ -273,59 +226,48 @@ header {
   flex-wrap: wrap;
   margin-top: 24px;
   background: white;
-  padding: 40px 40px 36px;
+  padding: 40px;
   border-radius: 28px;
   box-shadow: 0 14px 38px rgba(0, 0, 0, 0.09);
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-user-select: text;
-  user-select: text;
 }
 
 .profile-pic {
   width: 160px;
-  height: auto;
+  height: 160px;
   border-radius: 50%;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-  -webkit-user-select: none;
-  user-select: none;
+  object-fit: cover;
   flex-shrink: 0;
 }
 
 .about-text {
-  flex: 1 1 450px;
+  flex: 1;
   font-size: 1.15rem;
   color: #475569;
   line-height: 1.7;
-  white-space: normal;
-  word-break: break-word;
-  max-width: 600px;
+  min-width: 300px;
 }
 
 /* ============================
-   SECCIÓN PROYECTOS (GRID)
+   PROYECTOS
 ============================ */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 28px;
   margin-top: 36px;
 }
 
 .project-card {
   background: white;
-  padding: 24px 28px;
+  padding: 28px;
   border-radius: 20px;
-  box-shadow: 0 14px 26px rgb(0 52 102 / 0.1);
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-  -webkit-user-select: none;
-  user-select: none;
+  box-shadow: 0 14px 26px rgba(0, 52, 102, 0.1);
+  transition: all 0.3s ease;
 }
 
-.project-card:hover,
-.project-card:focus-within {
-  box-shadow: 0 20px 38px rgb(0 52 102 / 0.22);
+.project-card:hover {
+  box-shadow: 0 20px 38px rgba(0, 52, 102, 0.22);
   transform: translateY(-6px);
 }
 
@@ -349,32 +291,30 @@ header {
 
 .project-links {
   display: flex;
-  gap: 18px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btn-link {
-  background-color: #2563eb;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
   color: white;
   padding: 12px 22px;
   border-radius: 18px;
   font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 12px 28px rgb(37 99 235 / 0.4);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-  -webkit-user-select: none;
-  user-select: none;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
-.btn-link:hover,
-.btn-link:focus {
-  background-color: #1e40af;
-  box-shadow: 0 18px 38px rgb(30 64 175 / 0.6);
-  outline: none;
-  transform: scale(1.05);
+.btn-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.4);
 }
 
 /* ============================
-   LISTAS (SEO, EXPERIENCIA, HABILIDADES)
+   LISTAS Y SECCIONES
 ============================ */
 .seo-services,
 .experience-list {
@@ -382,9 +322,6 @@ header {
   color: #334155;
   margin-top: 12px;
   font-size: 1rem;
-  max-width: 600px;
-  -webkit-user-select: text;
-  user-select: text;
 }
 
 .experience-list {
@@ -395,10 +332,7 @@ header {
 .experience-list li {
   margin-bottom: 8px;
   font-weight: 600;
-  word-break: break-word;
 }
-
-/* Skills */
 
 .skills-category {
   margin-top: 32px;
@@ -410,183 +344,219 @@ header {
   color: #334155;
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
-  margin-top: 10px;
-  -webkit-user-select: none;
-  user-select: none;
+  gap: 16px;
+  margin-top: 12px;
 }
 
 .skills-list li {
-  background-color: #dbeafe;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
   color: #1e40af;
   font-weight: 600;
-  padding: 8px 20px;
-  border-radius: 24px;
-  font-size: 1rem;
-  -webkit-user-select: none;
-  user-select: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
   cursor: default;
+}
+
+.skills-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
 }
 
 /* ============================
    CONTACTO
 ============================ */
-
-/* Versión escritorio: sin fondo azul, texto centrado, más pequeño */
 .contact-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
-  max-width: 900px;
-  margin: 36px auto 80px;
-  padding: 0;
-  -webkit-user-select: none;
-  user-select: none;
-  background: none;
+  margin: 36px 0 80px;
+  flex-wrap: wrap;
 }
 
 .contact-card {
-  background: transparent;
-  color: #2563eb;
-  flex: 0 0 auto;
-  min-width: 160px;
-  max-width: 220px;
-  padding: 12px 16px;
-  border-radius: 0;
-  box-shadow: none;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   gap: 12px;
   font-weight: 600;
-  font-size: 1.1rem;
-  text-align: center;
-  cursor: default;
-  white-space: nowrap;
-  -webkit-user-select: text;
-  user-select: text;
-  transition: none;
+  font-size: 1rem;
+  color: #2563eb;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
 
 .contact-card img {
-  width: 32px;
-  height: 32px;
-  filter: none;
-  transition: none;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
 }
 
-.contact-card span {
-  flex: none;
-  overflow: visible;
-  white-space: nowrap;
-  line-height: 1.2;
-}
-
-.contact-card:hover,
-.contact-card:focus {
-  background-color: transparent;
-  box-shadow: none;
-  transform: none;
-  outline: none;
-}
-
-.contact-card:hover img,
-.contact-card:focus img {
-  transform: none;
-}
-
+/* ============================
+   FOOTER
+============================ */
 footer {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 16px;
+  background: linear-gradient(135deg, #002a5c 0%, #003575 100%);
+  color: #e2e8f0;
   text-align: center;
-  color: #475569;
-  font-size: 1rem;
--webkit-user-select: none;
-user-select: none;
-  box-sizing: border-box;
+  padding: 30px 20px;
+  font-size: 0.9rem;
 }
 
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
 @media (max-width: 768px) {
-  nav {
-    overflow: visible; /* para que no corte el botón */
-  }
-
-  #nav-toggle {
-    display: flex;
-    position: relative;
-    z-index: 1500; /* arriba del menú */
-  }
-
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -320px; /* oculto fuera de pantalla */
-    width: 320px; /* ancho fijo que no corta */
-    max-width: 90vw;
+    right: -100%;
     height: calc(100vh - 70px);
-    padding: 30px 20px 20px;
-    background: #003575;
-    border-left: 5px solid #2563eb;
-    box-shadow: -6px 0 30px rgba(0, 53, 117, 0.55);
-    border-radius: 0 0 0 20px;
+    width: 280px;
+    max-width: 85vw;
+    background: linear-gradient(180deg, #003575 0%, #002a5c 100%);
     flex-direction: column;
-    gap: 24px;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 2rem 0;
+    gap: 0;
     transition: right 0.3s ease;
-    overflow-y: auto;
-    z-index: 1400;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
   }
 
-  .nav-links.nav-active {
-    right: 0; /* visible */
+  .nav-links.active {
+    right: 0;
   }
 
-  .nav-links li a {
-    font-size: 1.15rem;
-    padding: 14px 20px;
-    border-radius: 18px;
-    white-space: normal;
-    word-break: break-word;
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+    font-size: 1.1rem;
   }
 
   .github-link {
-    display: flex !important;
     margin-left: 0;
-    margin-top: 12px;
-    justify-content: center;
-    gap: 8px;
-    font-size: 1.4rem;
-    padding: 10px 0;
-    border-top: 1px solid #2563eb;
-    width: 100%;
-    box-sizing: border-box;
+    padding-left: 0;
+    border-left: none;
+    border-top: 2px solid rgba(37, 99, 235, 0.3);
+    margin-top: 1rem;
+    padding-top: 1rem;
   }
-}
 
-  /* About: vertical */
+  .github-link a {
+    justify-content: center;
+    gap: 12px;
+    border-bottom: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .content-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
   .about-container {
     flex-direction: column;
-    padding: 32px 24px;
-    max-width: 100%;
-    border-radius: 20px;
+    text-align: center;
+    padding: 30px 20px;
   }
 
   .profile-pic {
     width: 140px;
-    margin-bottom: 20px;
+    height: 140px;
   }
 
-  .about-text {
-    max-width: 100%;
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-links {
+    justify-content: center;
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .tagline {
     font-size: 1.1rem;
   }
 
-  /* Contact cards: uno arriba del otro sin scroll horizontal */
-  .contact-cards {
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    max-width: 100%;
-    margin: 20px auto 40px;
+  .about-text {
+    font-size: 1rem;
   }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
+/* Overlay para cerrar menú móvil */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.nav-overlay.active {
+  display: block;
+}
+
+@media (min-width: 769px) {
+  .nav-overlay {
+    display: none !important;
+  }
+}
