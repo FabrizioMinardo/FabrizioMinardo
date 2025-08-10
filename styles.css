@@ -75,7 +75,9 @@ a:focus {
   outline: none;
 }
 
-/* NAVIGATION */
+/* ============================
+   NAVIGATION REFORMADO
+============================ */
 nav {
   position: sticky;
   top: 0;
@@ -92,7 +94,6 @@ nav {
   box-sizing: border-box;
 }
 
-/* Nav container que limita el ancho pero deja adaptarse */
 .nav-container {
   max-width: 1100px;
   width: 100%;
@@ -101,7 +102,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap; /* no se deben bajar items */
+  flex-wrap: nowrap;
   overflow: visible;
 }
 
@@ -114,29 +115,29 @@ nav {
   font-style: italic;
   white-space: nowrap;
   cursor: default;
-  flex-shrink: 0; /* que no se reduzca */
+  flex-shrink: 0;
   padding-right: 12px;
 }
 
-/* Contenedor links y github juntos */
+/* Nav links and GitHub container */
 .nav-links-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: nowrap;
-  min-width: 0; /* evita overflow */
+  min-width: 0;
 }
 
-/* Lista nav links */
+/* Nav links list */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
   margin: 0;
   padding: 0;
   flex-wrap: nowrap;
+  min-width: 0;
   overflow: hidden;
-  min-width: 0; /* evita overflow */
 }
 
 .nav-links li {
@@ -161,10 +162,36 @@ nav {
   color: white;
   outline: none;
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgb(37 99 235 / 0.4);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
 }
 
-/* Botón hamburguesa */
+/* GitHub link */
+.github-link {
+  color: #dbeafe;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  font-size: 1.3rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.github-link svg {
+  fill: currentColor;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.github-link:hover,
+.github-link:focus {
+  color: #2563eb;
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Hamburger button */
 #nav-toggle {
   display: none;
   flex-direction: column;
@@ -175,6 +202,7 @@ nav {
   border: none;
   cursor: pointer;
   z-index: 1300;
+  padding: 0;
 }
 
 #nav-toggle span {
@@ -197,6 +225,11 @@ nav {
 
 #nav-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu (hidden by default) */
+.nav-links {
+  transition: none; /* default no animation on desktop */
 }
 
 /* Overlay menú móvil */
@@ -264,27 +297,28 @@ nav {
     justify-content: flex-end;
   }
 
-  /* Menú hamburguesa visible */
+  /* Show hamburger */
   #nav-toggle {
     display: flex;
   }
 
-  /* Menú desactivado por defecto (fuera de pantalla) */
+  /* Mobile menu styles */
   .nav-links {
     position: fixed;
     top: 70px;
     right: -320px;
+    width: 280px;
+    max-width: 90vw;
+    height: calc(100vh - 70px);
     flex-direction: column;
     background: #003575;
-    width: 320px;
-    height: calc(100vh - 70px);
     padding: 40px 28px 20px;
     border-left: 5px solid #2563eb;
     box-shadow: -6px 0 30px rgba(0, 53, 117, 0.55);
-    transition: right 0.3s ease;
-    gap: 28px;
     border-radius: 0 0 0 30px;
+    gap: 28px;
     overflow-y: auto;
+    transition: right 0.3s ease;
     z-index: 1300;
   }
 
@@ -301,7 +335,7 @@ nav {
     word-break: break-word;
   }
 
-  /* Mostrar GitHub link dentro del menú móvil */
+  /* GitHub link inside mobile menu */
   .github-link {
     margin-left: 0;
     margin-top: 12px;
@@ -311,9 +345,9 @@ nav {
     padding: 10px 0;
     border-top: 1px solid #2563eb;
     width: 100%;
+    box-sizing: border-box;
   }
 }
-
 
 /* ============================
    HEADER / SOBRE MÍ
@@ -569,54 +603,46 @@ footer {
   text-align: center;
   color: #475569;
   font-size: 1rem;
-  user-select: text;
+-webkit-user-select: none;
+user-select: none;
   box-sizing: border-box;
 }
 
-
-@media (max-width: 1100px) {
-  body {
-    padding: 20px 24px 80px;
-  }
-  .nav-container {
-    padding: 0 24px;
-  }
-}
 
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -280px; /* reduce para que quede más cerca */
-    flex-direction: column;
-    background: #003575;
-    width: 280px; /* ancho menor para que no ocupe tanto */
-    max-width: 90vw; /* adaptable a la pantalla */
+    right: -280px; /* para ocultar menú */
+    width: 280px; /* ancho menor para no ocupar casi toda la pantalla */
+    max-width: 90vw; /* adaptable al ancho de pantalla */
     height: calc(100vh - 70px);
-    padding: 30px 20px 20px; /* menos padding para espacio */
+    padding: 30px 20px 20px;
+    background: #003575;
     border-left: 5px solid #2563eb;
     box-shadow: -6px 0 30px rgba(0, 53, 117, 0.55);
-    transition: right 0.3s ease;
-    gap: 24px;
     border-radius: 0 0 0 20px;
+    flex-direction: column;
+    gap: 24px;
+    transition: right 0.3s ease;
     overflow-y: auto;
     z-index: 1300;
   }
 
   .nav-links.nav-active {
-    right: 0;
+    right: 0; /* menú visible */
   }
 
+  /* Ajusta links dentro del menú */
   .nav-links li a {
     font-size: 1.15rem;
     padding: 14px 20px;
     border-radius: 18px;
     white-space: normal;
-    max-width: 100%;
     word-break: break-word;
   }
 
-  /* Ajustar GitHub link dentro menú móvil */
+  /* GitHub link visible y bien ubicado */
   .github-link {
     display: flex !important;
     margin-left: 0;
