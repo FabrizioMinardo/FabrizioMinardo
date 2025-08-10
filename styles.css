@@ -131,7 +131,8 @@ nav {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1001;
+  z-index: 1002;
+  position: relative;
 }
 
 .nav-toggle span {
@@ -467,6 +468,11 @@ footer {
 
   .nav-toggle {
     display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
   }
 
   .content-container {
@@ -516,6 +522,7 @@ footer {
 @media (max-width: 480px) {
   .nav-container {
     padding: 0 1rem;
+    position: relative;
   }
 
   .logo {
