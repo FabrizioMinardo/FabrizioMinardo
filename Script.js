@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
   const navOverlay = document.getElementById('nav-overlay');
+  const body = document.body;
+  const html = document.documentElement;
+  let scrollPosition = 0;
 
   if (!navToggle || !navLinks || !navOverlay) return;
 
@@ -11,24 +14,32 @@ document.addEventListener('DOMContentLoaded', function() {
     navToggle.classList.remove('active');
     navLinks.classList.remove('active');
     navOverlay.classList.remove('active');
-    document.body.style.overflow = 'auto';
-    document.body.style.position = 'static';
+    body.classList.remove('menu-open');
+    body.style.overflow = '';
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, scrollPosition);
   }
 
   // Toggle del menú móvil
   navToggle.addEventListener('click', function() {
-    const isActive = navLinks.classList.toggle('active');
-    navToggle.classList.toggle('active', isActive);
-    navOverlay.classList.toggle('active', isActive);
+    const isActive = !navLinks.classList.contains('active');
     
-    // Prevenir scroll del body cuando el menú está abierto
     if (isActive) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
+      // Guardar posición del scroll antes de abrir el menú
+      scrollPosition = window.scrollY;
+      body.classList.add('menu-open');
+      body.style.overflow = 'hidden';
+      body.style.position = 'fixed';
+      body.style.top = `-${scrollPosition}px`;
+      body.style.width = '100%';
     } else {
       closeMenu();
     }
+    
+    navToggle.classList.toggle('active', isActive);
+    navLinks.classList.toggle('active', isActive);
+    navOverlay.classList.toggle('active', isActive);
   });
 
   // Cerrar menú al hacer clic en el overlay
@@ -38,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinksItems = navLinks.querySelectorAll('a');
   navLinksItems.forEach(function(link) {
     link.addEventListener('click', function(e) {
-      // Solo cerrar si no es el enlace de GitHub (que abre en nueva pestaña)
       if (!this.closest('.github-link')) {
         closeMenu();
       }
@@ -62,18 +72,15 @@ document.addEventListener('DOMContentLoaded', function() {
       if (target) {
         e.preventDefault();
         
-        // Cerrar menú si está abierto (para móviles)
         if (navLinks.classList.contains('active')) {
           closeMenu();
         }
         
-        // Scroll suave
         target.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
         
-        // Cambiar URL sin recargar
         if (history.pushState) {
           history.pushState(null, null, href);
         } else {

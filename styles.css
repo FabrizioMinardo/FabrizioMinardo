@@ -29,30 +29,25 @@ body {
 }
 
 /* ============================
-   NAVIGATION MEJORADA - REVISADO
+   NAVIGATION - VERSIÓN LIMPIA
 ============================ */
 nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background: linear-gradient(135deg, #002a5c 0%, #003575 100%);
+  background: #002a5c; /* Color sólido en lugar de gradiente */
   box-shadow: 0 4px 20px rgba(0, 42, 92, 0.3);
   z-index: 1100;
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
-  backdrop-filter: saturate(180%) blur(10px);
 }
 
 .nav-container {
-  max-width: 100%;
-  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  position: relative;
-  z-index: 1110;
 }
 
 .logo {
@@ -61,7 +56,7 @@ nav {
   color: #ffffff;
   letter-spacing: 1px;
   cursor: pointer;
-  -webkit-user-select: none; 
+  -webkit-user-select: none;
   user-select: none;
   transition: transform 0.3s ease;
 }
@@ -74,20 +69,11 @@ nav {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
-  pointer-events: auto;
-  position: static;
-  background: transparent;
-  height: auto;
-  width: auto;
-  flex-direction: row;
-  transition: none;
-  box-shadow: none;
 }
 
-/* Estilos para links en desktop */
 .nav-links a {
   color: #e2e8f0;
   text-decoration: none;
@@ -96,29 +82,11 @@ nav {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-links a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: left 0.5s;
 }
 
 .nav-links a:hover {
   background-color: rgba(37, 99, 235, 0.2);
   color: #ffffff;
-  transform: translateY(-2px);
-}
-
-.nav-links a:hover::before {
-  left: 100%;
 }
 
 .github-link {
@@ -140,7 +108,7 @@ nav {
   fill: currentColor;
 }
 
-/* BOTÓN HAMBURGUESA - NAV TOGGLE */
+/* BOTÓN HAMBURGUESA */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -148,9 +116,6 @@ nav {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 1112; /* encima de todo */
-  position: relative;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle span {
@@ -435,9 +400,33 @@ footer {
 }
 
 /* ============================
-   MENÚ DESPLEGABLE MÓVIL
+   MENÚ DESPLEGABLE MÓVIL - VERSIÓN CORREGIDA
 ============================ */
 @media (max-width: 480px) {
+  /* Prevenir scroll horizontal en móvil */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body.menu-open {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  nav {
+    /* Eliminamos completamente el backdrop-filter */
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    /* Fondo sólido mejorado */
+    background: #001f47 !important;
+    /* Borde sutil para mejor definición */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
   .nav-links {
     position: fixed;
     top: 70px;
@@ -446,7 +435,7 @@ footer {
     height: calc(100vh - 70px);
     width: 80vw;
     max-width: 280px;
-    background: #ffffff;
+    background: #ffffff; /* Fondo sólido blanco */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -460,6 +449,9 @@ footer {
     pointer-events: none;
     opacity: 0;
     box-sizing: border-box;
+    /* Eliminar cualquier filtro heredado */
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
 
   .nav-links.active {
@@ -475,8 +467,9 @@ footer {
     width: 100vw;
     height: calc(100vh - 70px);
     background: rgba(0, 0, 0, 0.3);
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
+    /* Eliminar filtros en el overlay */
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -543,21 +536,15 @@ footer {
     z-index: 1112;
   }
 
-  /* Asegurar que el contenido no desborde */
   .content-container {
     padding-left: 5%;
     padding-right: 5%;
+    width: 100%;
+    overflow-x: hidden;
   }
 }
 
-/* En desktop no mostrar overlay */
-@media (min-width: 481px) {
-  .nav-overlay {
-    display: none !important;
-  }
-}
-
-/* Asegurar que no haya scroll horizontal */
+/* Reglas generales para prevenir scroll horizontal */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
