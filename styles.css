@@ -284,65 +284,49 @@ nav {
 
 /* Móvil */
 @media (max-width: 768px) {
+  /* Ajusta el contenedor nav para que no corte contenido */
   nav {
-    padding: 0 16px;
+    overflow: visible; /* por si hay overflow hidden que corte */
   }
 
-  .nav-container {
-    padding: 0;
-  }
-
-  .nav-links-container {
-    width: 100%;
-    justify-content: flex-end;
-  }
-
-  /* Show hamburger */
+  /* Botón hamburguesa, que quede siempre visible */
   #nav-toggle {
     display: flex;
+    position: relative;
+    z-index: 1500; /* más arriba que el menú */
   }
 
-  /* Mobile menu styles */
+  /* Menú móvil: un poco más ancho para que no corte los puntos */
   .nav-links {
-    position: fixed;
-    top: 70px;
+    width: 320px; /* aumento 40px */
     right: -320px;
-    width: 280px;
-    max-width: 90vw;
-    height: calc(100vh - 70px);
-    flex-direction: column;
-    background: #003575;
     padding: 40px 28px 20px;
-    border-left: 5px solid #2563eb;
-    box-shadow: -6px 0 30px rgba(0, 53, 117, 0.55);
     border-radius: 0 0 0 30px;
-    gap: 28px;
-    overflow-y: auto;
-    transition: right 0.3s ease;
-    z-index: 1300;
   }
 
   .nav-links.nav-active {
     right: 0;
   }
 
+  /* Ajusta tamaño y padding de enlaces para que no queden apretados */
   .nav-links li a {
     font-size: 1.2rem;
-    padding: 16px 24px;
+    padding: 16px 28px; /* un poco más de padding horizontal */
     border-radius: 20px;
     white-space: normal;
     max-width: 100%;
     word-break: break-word;
   }
 
-  /* GitHub link inside mobile menu */
+  /* GitHub visible y bien posicionado en menú móvil */
   .github-link {
+    display: flex !important;
     margin-left: 0;
-    margin-top: 12px;
+    margin-top: 20px;
     justify-content: center;
     gap: 8px;
     font-size: 1.5rem;
-    padding: 10px 0;
+    padding: 12px 0;
     border-top: 1px solid #2563eb;
     width: 100%;
     box-sizing: border-box;
