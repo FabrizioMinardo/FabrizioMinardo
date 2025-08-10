@@ -436,11 +436,11 @@ footer {
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -320px; /* fuera de pantalla */
+    right: -320px; /* menú oculto por defecto */
     height: calc(100vh - 70px);
     width: 280px;
     max-width: 85vw;
-    background: #ffffff; /* fondo blanco para mejor legibilidad */
+    background: #ffffff;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -448,14 +448,46 @@ footer {
     gap: 0;
     transition: right 0.3s ease;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-    z-index: 1110;
+    z-index: 1111; /* mayor que overlay */
     overflow-y: auto;
+    pointer-events: auto; /* asegurar que recibe clicks */
   }
 
   .nav-links.active {
-    right: 0; /* se despliega visible */
+    right: 0;
   }
 
+  /* Overlay que cubre TODO excepto el menú */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    width: calc(100% - 280px); /* cubre todo menos ancho menú */
+    background: rgba(255, 255, 255, 0.7); /* fondo blanco semi */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: none; /* opcional: quitar blur para Edge */
+    z-index: 1110; /* justo debajo del menú */
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-overlay.active {
+    display: block;
+    pointer-events: auto; /* permite clics para cerrar menú */
+    opacity: 1;
+  }
+
+  /* Opcional: si quieres el blur solo en Chrome, puedes usar un @supports */
+  @supports ((-webkit-backdrop-filter: blur(8px)) or (backdrop-filter: blur(8px))) {
+    .nav-overlay.active {
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+  }
+
+  /* Otros estilos móviles siguen igual */
   .nav-links li {
     width: 100%;
   }
@@ -466,7 +498,7 @@ footer {
     border-radius: 0;
     border-bottom: 1px solid #e2e8f0;
     font-size: 1.1rem;
-    color: #1e293b; /* texto oscuro para fondo blanco */
+    color: #1e293b;
     font-weight: 600;
     transition: background-color 0.3s ease;
   }
@@ -497,78 +529,15 @@ footer {
     color: #2563eb;
   }
 
-  /* Mostrar botón hamburguesa */
+  /* Botón hamburguesa */
   .nav-toggle {
     display: flex;
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1112; /* encima del menú y overlay */
   }
-
-  .content-container {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-  }
-
-  .profile-pic {
-    width: 140px;
-    height: 140px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-links {
-    justify-content: center;
-  }
-
-  .contact-cards {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .contact-card {
-    width: 100%;
-    max-width: 280px;
-    justify-content: center;
-  }
-}
-
-.nav-overlay.active {
-  display: block;
-  pointer-events: auto;
-}
-
-/* Asegura que el menú no queda "dentro" del overlay visualmente y que no se bloquee */
-.nav-links {
-  position: fixed; /* ya lo tienes */
-  z-index: 1110; /* mayor que overlay */
-}
-
-/* Para que el overlay no bloquee el menú, agrega esto */
-.nav-overlay.active {
-  pointer-events: auto;
-}
-
-/* Añade a .nav-links para que acepte clics incluso si overlay está activo */
-.nav-links {
-  pointer-events: auto; 
 }
 
 /* En desktop no mostrar overlay */
