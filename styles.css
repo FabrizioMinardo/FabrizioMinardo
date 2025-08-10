@@ -167,14 +167,7 @@ nav {
 
 /* GitHub link */
 .github-link {
-  color: #dbeafe;
-  display: flex;
-  align-items: center;
-  margin-left: 16px;
-  transition: color 0.3s ease, transform 0.2s ease;
-  font-size: 1.3rem;
-  white-space: nowrap;
-  flex-shrink: 0;
+  display: none;
 }
 
 .github-link svg {
@@ -319,17 +312,18 @@ nav {
   }
 
   /* GitHub visible y bien posicionado en menú móvil */
-  .github-link {
-    display: flex !important;
-    margin-left: 0;
-    margin-top: 20px;
+   .github-link {
+    display: block;
+  }
+  .github-link a {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-size: 1.5rem;
-    padding: 12px 0;
-    border-top: 1px solid #2563eb;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 10px;
+  }
+  .github-link svg {
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -592,14 +586,23 @@ user-select: none;
   box-sizing: border-box;
 }
 
-
 @media (max-width: 768px) {
+  nav {
+    overflow: visible; /* para que no corte el botón */
+  }
+
+  #nav-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1500; /* arriba del menú */
+  }
+
   .nav-links {
     position: fixed;
     top: 70px;
-    right: -280px; /* para ocultar menú */
-    width: 280px; /* ancho menor para no ocupar casi toda la pantalla */
-    max-width: 90vw; /* adaptable al ancho de pantalla */
+    right: -320px; /* oculto fuera de pantalla */
+    width: 320px; /* ancho fijo que no corta */
+    max-width: 90vw;
     height: calc(100vh - 70px);
     padding: 30px 20px 20px;
     background: #003575;
@@ -610,14 +613,13 @@ user-select: none;
     gap: 24px;
     transition: right 0.3s ease;
     overflow-y: auto;
-    z-index: 1300;
+    z-index: 1400;
   }
 
   .nav-links.nav-active {
-    right: 0; /* menú visible */
+    right: 0; /* visible */
   }
 
-  /* Ajusta links dentro del menú */
   .nav-links li a {
     font-size: 1.15rem;
     padding: 14px 20px;
@@ -626,7 +628,6 @@ user-select: none;
     word-break: break-word;
   }
 
-  /* GitHub link visible y bien ubicado */
   .github-link {
     display: flex !important;
     margin-left: 0;
