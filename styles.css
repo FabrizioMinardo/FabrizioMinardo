@@ -100,6 +100,7 @@ nav {
   align-items: center;
   padding: 0.5rem;
   border-radius: 50%;
+  gap: 8px; /* Espacio entre ícono y texto */
 }
 
 .github-link svg {
@@ -418,12 +419,9 @@ footer {
   }
 
   nav {
-    /* Eliminamos completamente el backdrop-filter */
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
-    /* Fondo sólido mejorado */
     background: #001f47 !important;
-    /* Borde sutil para mejor definición */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -435,7 +433,7 @@ footer {
     height: calc(100vh - 70px);
     width: 80vw;
     max-width: 280px;
-    background: #ffffff; /* Fondo sólido blanco */
+    background: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -449,7 +447,6 @@ footer {
     pointer-events: none;
     opacity: 0;
     box-sizing: border-box;
-    /* Eliminar cualquier filtro heredado */
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
   }
@@ -467,7 +464,6 @@ footer {
     width: 100vw;
     height: calc(100vh - 70px);
     background: rgba(0, 0, 0, 0.3);
-    /* Eliminar filtros en el overlay */
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     pointer-events: none;
@@ -518,9 +514,13 @@ footer {
 
   .github-link a {
     justify-content: center;
-    gap: 12px;
+    gap: 12px; /* Espaciado entre ícono y texto */
     border-bottom: none;
     color: #1e293b;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 50%;
   }
 
   .github-link a:hover {
@@ -541,6 +541,12 @@ footer {
     padding-right: 5%;
     width: 100%;
     overflow-x: hidden;
+  }
+
+  /* Centrar imagen en sección #about */
+  #about img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
