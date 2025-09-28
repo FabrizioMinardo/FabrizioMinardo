@@ -219,8 +219,8 @@ header {
 }
 
 .profile-pic {
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   object-fit: cover;
