@@ -35,7 +35,8 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background: #002a5c; /* Color sólido en lugar de gradiente */
+  background: #002a5c;
+  /* Color sólido en lugar de gradiente */
   box-shadow: 0 4px 20px rgba(0, 42, 92, 0.3);
   z-index: 1100;
 }
@@ -100,7 +101,8 @@ nav {
   align-items: center;
   padding: 0.5rem;
   border-radius: 50%;
-  gap: 8px; /* Espacio entre ícono y texto */
+  gap: 8px;
+  /* Espacio entre ícono y texto */
 }
 
 .github-link svg {
@@ -147,7 +149,8 @@ nav {
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 20px 5vw 80px; /* padding lateral relativo */
+  padding: 20px 5vw 80px;
+  /* padding lateral relativo */
   flex: 1;
   box-sizing: border-box;
 }
@@ -155,7 +158,9 @@ nav {
 /* ============================
    TIPOGRAFÍA Y ENCABEZADOS
 ============================ */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   color: #0f172a;
   margin-bottom: 0.4em;
@@ -404,8 +409,10 @@ footer {
    MENÚ DESPLEGABLE MÓVIL - VERSIÓN CORREGIDA
 ============================ */
 @media (max-width: 480px) {
+
   /* Prevenir scroll horizontal en móvil */
-  html, body {
+  html,
+  body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -513,15 +520,18 @@ footer {
   }
 
   .github-link a {
-    justify-content: center;
-    gap: 12px; /* Espaciado entre ícono y texto */
-    border-bottom: none;
-    color: #1e293b;
     display: flex;
     align-items: center;
-    padding: 0.5rem;
-    border-radius: 50%;
+    justify-content: flex-start;
+    gap: 12px;
+    border-bottom: none;
+    color: #1e293b;
+    padding: 0.5rem 2rem;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
+
 
   .github-link a:hover {
     color: #2563eb;
@@ -551,14 +561,18 @@ footer {
 }
 
 /* Reglas generales para prevenir scroll horizontal */
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 
 /* Asegurar que las imágenes no causen desbordamiento */
-img, svg, video, iframe {
+img,
+svg,
+video,
+iframe {
   max-width: 100%;
   height: auto;
 }
