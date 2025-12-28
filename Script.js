@@ -1,5 +1,5 @@
 // Script para el menú de navegación móvil
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
   const navOverlay = document.getElementById('nav-overlay');
@@ -15,16 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.classList.remove('active');
     navOverlay.classList.remove('active');
     body.classList.remove('menu-open');
+
     body.style.overflow = '';
     body.style.position = '';
     body.style.top = '';
-    window.scrollTo(0, scrollPosition);
+    body.style.width = '';
   }
 
   // Toggle del menú móvil
-  navToggle.addEventListener('click', function() {
+  navToggle.addEventListener('click', function () {
     const isActive = !navLinks.classList.contains('active');
-    
+
     if (isActive) {
       // Guardar posición del scroll antes de abrir el menú
       scrollPosition = window.scrollY;
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       closeMenu();
     }
-    
+
     navToggle.classList.toggle('active', isActive);
     navLinks.classList.toggle('active', isActive);
     navOverlay.classList.toggle('active', isActive);
@@ -47,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Cerrar menú al hacer clic en un enlace dentro del menú
   const navLinksItems = navLinks.querySelectorAll('a');
-  navLinksItems.forEach(function(link) {
-    link.addEventListener('click', function(e) {
+  navLinksItems.forEach(function (link) {
+    link.addEventListener('click', function (e) {
       if (!this.closest('.github-link')) {
         closeMenu();
       }
@@ -56,37 +57,25 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Cerrar menú al cambiar el tamaño de pantalla
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     if (window.innerWidth > 480) {
       closeMenu();
     }
   });
 
-  // Smooth scroll para los enlaces internos
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === "#" || href === "") return;
-      
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        
-        if (navLinks.classList.contains('active')) {
-          closeMenu();
-        }
-        
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        
-        if (history.pushState) {
-          history.pushState(null, null, href);
-        } else {
-          location.hash = href;
-        }
-      }
+  // Scroll suave al hacer clic en enlaces internos
+  navLinks.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (!target) return;
+
+      e.preventDefault();
+      closeMenu();
+
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
   });
 });
