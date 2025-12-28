@@ -407,6 +407,8 @@ footer {
 
 /* ===== OVERLAY ===== */
 .nav-overlay {
+  width: 100%;
+  height: 100%;
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
@@ -429,6 +431,7 @@ footer {
 
   .nav-links {
     position: fixed;
+    transition: right 0.3s ease-in-out;
     top: 0;
     right: -100%;
     height: 100vh;
