@@ -24,15 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
   navOverlay.classList.remove('active');
   body.classList.remove('menu-open');
   navToggle.setAttribute('aria-expanded', 'false');
-
-  body.style.overflow = '';
-  body.style.position = '';
-  body.style.top = '';
-  body.style.width = '';
-
-  // restaura la posición previa
-  window.scrollTo(0, scrollPosition);
 }
+
   /* ============================
      TOGGLE BUTTON
   ============================ */
