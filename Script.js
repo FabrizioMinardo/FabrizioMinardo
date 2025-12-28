@@ -19,19 +19,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function closeMenu() {
-    navToggle.classList.remove('active');
-    navLinks.classList.remove('active');
-    navOverlay.classList.remove('active');
-    body.classList.remove('menu-open');
-    navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.classList.remove('active');
+  navLinks.classList.remove('active');
+  navOverlay.classList.remove('active');
+  body.classList.remove('menu-open');
+  navToggle.setAttribute('aria-expanded', 'false');
 
-    // limpiar estilos por seguridad
-    body.style.overflow = '';
-    body.style.position = '';
-    body.style.top = '';
-    body.style.width = '';
-  }
+  body.style.overflow = '';
+  body.style.position = '';
+  body.style.top = '';
+  body.style.width = '';
 
+  // restaura la posición previa
+  window.scrollTo(0, scrollPosition);
+}
   /* ============================
      TOGGLE BUTTON
   ============================ */
