@@ -1,33 +1,34 @@
-# 👋 Hola, soy Fabrizio
+# 👋 Hola, soy Fabrizio Minardo
 
-💻 **Analista de Sistemas | Programador | Desarrollador de Soluciones Digitales**  
+💻 **Analista IT / Digital Junior | Implementación de sistemas | Soporte funcional**
 
-Con experiencia en:  
-- Desarrollo de aplicaciones y automatización de procesos.  
-- Integración de sistemas y optimización de flujos de trabajo.  
-- Creación de herramientas personalizadas para empresas.  
-- Análisis y gestión de datos para la toma de decisiones.  
+Analista de Sistemas con experiencia en implementación de soluciones tecnológicas orientadas a negocio, automatización de procesos y soporte funcional.
+
+He trabajado en proyectos de e-commerce, salud, educación y gastronomía, participando en la digitalización de operaciones, integración de sistemas y análisis de datos para mejorar resultados operativos y comerciales.
 
 ---
 
-## 💬 Sobre mí
-Hola, soy **Fabrizio**, Analista de Sistemas de Argentina 🇦🇷.  
-Me encanta **resolver problemas**, aprender tecnologías nuevas y encontrar maneras de que las cosas funcionen mejor.  
+## 🧠 Perfil profesional
+Me especializo en entender procesos, detectar oportunidades de mejora y traducir necesidades del negocio en soluciones técnicas simples, mantenibles y orientadas a resultados.
 
-💡 Me atraen los proyectos que mezclan **creatividad + lógica**, y creo que la mejor forma de crecer es **compartiendo lo que uno sabe y aprendiendo de los demás**.
-
----
-
-## 🎯 Objetivo profesional
-📌 Continuar expandiendo mis conocimientos y experiencia, aportando soluciones efectivas,
-dejando una marca positiva en cada proyecto y trabajando junto a los mejores.
+Tengo experiencia trabajando con usuarios finales, acompañando la adopción de sistemas y resolviendo incidencias funcionales y técnicas.
 
 ---
 
-## 🛠 Tecnologías y Herramientas
-<p align="center"> <img src="https://skillicons.dev/icons?i=cs,html,css,js,python,mysql,docker,linux" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="48" height="48" title="Google Apps Script" /> </p>
+## 🛠 Tecnologías principales
+- Bases de datos SQL (MySQL, SQL Server, Oracle)
+- Automatización de procesos (Google Apps Script)
+- Desarrollo y scripting (C#, .NET, JavaScript)
+- Integraciones API (REST, Telegram Bot)
+- Herramientas: GitHub, Docker, Jira
+
+---
+
+## 🎯 Objetivo
+Continuar desarrollándome en roles de Analista IT / Digital Junior, Soporte funcional o Implementación de sistemas, aportando criterio técnico y visión de negocio.
 
 ---
 
 ## 📬 Contacto
-<p align="center"> <a href="mailto:fabriziominardo@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="40" height="40" alt="Email"></a> &nbsp; <a href="https://www.linkedin.com/in/fabrizio-minardo-programador/"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="40" height="40" alt="LinkedIn"></a> &nbsp; <a href="https://wa.me/1128829272"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="40" height="40" alt="WhatsApp"></a> </p>
+- Email: minardofabrizio@gmail.com  
+- LinkedIn: https://www.linkedin.com/in/fabrizio-minardo-programador
