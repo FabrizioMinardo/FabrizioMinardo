@@ -1,6 +1,6 @@
 # 👋 Hola, soy Fabrizio Minardo
 
-💻 **Analista IT / Digital Junior | Implementación de sistemas | Soporte funcional**
+💻 **Analista de Sistemas | Soluciones tecnológicas | IT Support**
 
 Analista de Sistemas con experiencia en implementación de soluciones tecnológicas orientadas a negocio, automatización de procesos y soporte funcional.
 
@@ -17,18 +17,17 @@ Tengo experiencia trabajando con usuarios finales, acompañando la adopción de 
 
 ## 🛠 Tecnologías principales
 - Bases de datos SQL (MySQL, SQL Server, Oracle)
-- Automatización de procesos (Google Apps Script)
-- Desarrollo y scripting (C#, .NET, JavaScript)
+- Desarrollo y scripting (C#, .NET, JavaScript, Google Apps Script)
 - Integraciones API (REST, Telegram Bot)
 - Herramientas: GitHub, Docker, Jira
 
 ---
 
 ## 🎯 Objetivo
-Continuar desarrollándome en roles de Analista IT / Digital Junior, Soporte funcional o Implementación de sistemas, aportando criterio técnico y visión de negocio.
+Continuar creciendo profesionalmente, aportando criterio técnico y visión de negocio.
 
 ---
 
 ## 📬 Contacto
-- Email: minardofabrizio@gmail.com  
-- LinkedIn: https://www.linkedin.com/in/fabrizio-minardo-programador
+- Email: minardofabrizio@gmail.com
+- LinkedIn: https://www.linkedin.com/in/fabrizio-minardo
