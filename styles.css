@@ -224,11 +224,15 @@ header {
 }
 
 .profile-pic {
-  width: 250px;   /* tamaño fijo */
-  height: auto;   /* mantiene proporción */
-  border-radius: 50%; /* circular */
+  width: 250px;
+  /* tamaño fijo */
+  height: 250px;
+  /* cuadrado para mantener círculo */
+  border-radius: 50%;
+  /* circular */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   object-fit: cover;
+  /* recorta sin deformar */
   flex-shrink: 0;
 }
 
