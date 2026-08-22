@@ -224,14 +224,14 @@ header {
 }
 
 .profile-pic {
-.profile-pic {
-  width: 250px;   /* o el tamaño que quieras */
+  width: 250px;   /* tamaño fijo */
   height: auto;   /* mantiene proporción */
-  border-radius: 50%; /* si querés que sea circular */
+  border-radius: 50%; /* circular */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   object-fit: cover;
   flex-shrink: 0;
 }
+
 
 .about-text {
   flex: 1;
