@@ -224,9 +224,10 @@ header {
 }
 
 .profile-pic {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
+.profile-pic {
+  width: 250px;   /* o el tamaño que quieras */
+  height: auto;   /* mantiene proporción */
+  border-radius: 50%; /* si querés que sea circular */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   object-fit: cover;
   flex-shrink: 0;
