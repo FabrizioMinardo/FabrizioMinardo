@@ -459,3 +459,34 @@ footer {
     overflow: hidden;
   }
 }
+/* ============================
+   AJUSTES PARA EXPORTAR A PDF
+============================ */
+@media print {
+  /* Evitar que los títulos queden cortados */
+  h2, h3 {
+    page-break-before: always;
+    page-break-inside: avoid;
+  }
+
+  /* Mantener cada tarjeta de proyecto completa en una página */
+  .project-card {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Evitar cortes dentro de la lista de habilidades */
+  .skills-list {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Ajustar márgenes para que el contenido respire en A4 */
+  body {
+    margin: 20mm;
+  }
+
+  nav, footer {
+    display: none; /* Ocultar menú y footer en PDF si no son necesarios */
+  }
+}
