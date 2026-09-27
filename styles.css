@@ -431,7 +431,7 @@ footer {
 }
 
 /* ===== MOBILE NAV ===== */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .nav-toggle {
     display: flex;
   }
@@ -470,14 +470,21 @@ footer {
     margin: 15mm;
   }
 
-  /* Ocultar navegación web */
+  /* ============================
+     NAVEGACIÓN
+  ============================ */
+
   nav,
   .nav-overlay,
   .nav-toggle {
     display: none !important;
   }
 
-  /* Configuración general */
+
+  /* ============================
+     CONFIGURACIÓN GENERAL
+  ============================ */
+
   html {
     scroll-behavior: auto;
   }
@@ -497,7 +504,11 @@ footer {
     padding: 0;
   }
 
-  /* Header */
+
+  /* ============================
+     HEADER
+  ============================ */
+
   header {
     margin: 0 0 25px;
     text-align: left;
@@ -511,10 +522,15 @@ footer {
     font-size: 12pt;
   }
 
-  /* Secciones */
+
+  /* ============================
+     SECCIONES
+  ============================ */
+
   h2 {
     font-size: 17pt;
     margin-top: 24px;
+    margin-bottom: 12px;
     page-break-after: avoid;
   }
 
@@ -523,14 +539,21 @@ footer {
     page-break-after: avoid;
   }
 
-  /* Sobre mí */
+  .container {
+    page-break-inside: auto;
+  }
+
+
+  /* ============================
+     SOBRE MÍ
+  ============================ */
+
   .about-container {
     box-shadow: none;
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 20px;
     gap: 20px;
-    page-break-inside: avoid;
   }
 
   .profile-pic {
@@ -542,7 +565,11 @@ footer {
     font-size: 10pt;
   }
 
-  /* Proyectos */
+
+  /* ============================
+     PROYECTOS
+  ============================ */
+
   .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -554,6 +581,8 @@ footer {
     border: 1px solid #e2e8f0;
     border-radius: 10px;
     box-shadow: none;
+
+    /* Evita cortar una tarjeta por la mitad */
     page-break-inside: avoid;
   }
 
@@ -567,20 +596,24 @@ footer {
     font-size: 8.5pt;
   }
 
-  /* Evitar elementos partidos entre páginas */
-  .container,
-  .project-card,
-  .contact-card {
-    page-break-inside: avoid;
-  }
-
-  /* Ocultar enlaces de navegación de proyectos si no queremos
-     que aparezcan como botones web */
   .project-links {
     font-size: 8pt;
   }
 
-  /* Habilidades */
+
+  /* ============================
+     EXPERIENCIA
+  ============================ */
+
+  .experience-list {
+    page-break-inside: auto;
+  }
+
+
+  /* ============================
+     HABILIDADES
+  ============================ */
+
   .skills-list {
     gap: 6px;
   }
@@ -593,7 +626,11 @@ footer {
     font-size: 8.5pt;
   }
 
-  /* Contacto */
+
+  /* ============================
+     CONTACTO
+  ============================ */
+
   .contact-cards {
     margin: 20px 0;
     gap: 10px;
@@ -606,7 +643,11 @@ footer {
     min-width: 0;
   }
 
-  /* Footer */
+
+  /* ============================
+     FOOTER
+  ============================ */
+
   footer {
     background: none;
     color: #64748b;
@@ -614,7 +655,11 @@ footer {
     border-top: 1px solid #e2e8f0;
   }
 
-  /* No imprimir efectos de hover */
+
+  /* ============================
+     HOVER
+  ============================ */
+
   a:hover {
     color: inherit;
   }
