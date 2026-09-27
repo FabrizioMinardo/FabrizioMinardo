@@ -1,33 +1,56 @@
 # 👋 Hola, soy Fabrizio Minardo
 
-💻 **Analista de Sistemas | Soluciones tecnológicas | IT Support**
+💻 **Analista IT | Análisis Funcional y Procesos | SQL**
 
-Analista de Sistemas con experiencia en implementación de soluciones tecnológicas orientadas a negocio, automatización de procesos y soporte funcional.
+Recibido de Analista de Sistemas y con experiencia trabajando dentro de operaciones y negocios.
 
-He trabajado en proyectos de e-commerce, salud, educación y gastronomía, participando en la digitalización de operaciones, integración de sistemas y análisis de datos para mejorar resultados operativos y comerciales.
+Me enfoco en entender qué necesita el negocio, cómo afecta un problema a quienes participan del proceso y buscar soluciones funcionales y eficientes.
+
+He trabajado en proyectos vinculados a e-commerce, salud, educación y gastronomía, participando en análisis de necesidades, mejora de procesos, automatización y desarrollo e implementación de soluciones digitales.
 
 ---
 
 ## 🧠 Perfil profesional
-Me especializo en entender procesos, detectar oportunidades de mejora y traducir necesidades del negocio en soluciones técnicas simples, mantenibles y orientadas a resultados.
 
-Tengo experiencia trabajando con usuarios finales, acompañando la adopción de sistemas y resolviendo incidencias funcionales y técnicas.
+Me interesa entender cómo funciona una operación, identificar problemas y oportunidades de mejora y traducir las necesidades del negocio en soluciones digitales.
 
----
+Tengo experiencia trabajando como vínculo entre usuarios, áreas de negocio y equipos de desarrollo, participando en el relevamiento de necesidades, definición de requerimientos, implementación y seguimiento de soluciones.
 
-## 🛠 Tecnologías principales
-- Bases de datos SQL (MySQL, SQL Server, Oracle)
-- Desarrollo y scripting (C#, .NET, JavaScript, Google Apps Script)
-- Integraciones API (REST, Telegram Bot)
-- Herramientas: GitHub, Docker, Jira
+También cuento con experiencia en automatización de procesos, análisis de datos, SQL y desarrollo de sistemas.
 
 ---
 
-## 🎯 Objetivo
-Continuar creciendo profesionalmente, aportando criterio técnico y visión de negocio.
+## 🛠 Tecnologías y herramientas
+
+* **Bases de datos:** SQL, MySQL, SQL Server, Oracle
+* **Desarrollo:** C#, .NET, PHP, JavaScript, HTML, CSS
+* **Automatización e integración:** Google Apps Script, APIs, Telegram Bot API
+* **Herramientas:** GitHub, Docker, Jira, Asana
+
+---
+
+## 🚀 Proyectos
+
+Algunos de los proyectos en los que trabajé:
+
+* **Get Waiter:** sistema de atención y gestión operativa para restaurantes.
+* **UGAB:** sistema web de atención mediante código QR.
+* **TuFut:** sistema de gestión deportiva con PHP, MySQL y Docker.
+* **Veterinaria Gloria:** sistema de gestión para centralizar información de pacientes y propietarios.
+
+Podés conocer más sobre estos proyectos y ver demos o repositorios en mi [portfolio](https://fabriziominardo.github.io/).
+
+---
+
+## 🎯 Objetivo profesional
+
+Continuar desarrollándome en áreas vinculadas al análisis funcional, procesos y soluciones digitales, combinando comprensión del negocio, criterio técnico y mejora continua.
 
 ---
 
 ## 📬 Contacto
-- Email: minardofabrizio@gmail.com
-- LinkedIn: https://www.linkedin.com/in/fabrizio-minardo
+
+* **WhatsApp:** https://wa.me/1128829272
+* **Email:** [minardofabrizio@gmail.com](mailto:minardofabrizio@gmail.com)
+* **LinkedIn:** https://www.linkedin.com/in/fabrizio-minardo
+* **Portfolio:** https://fabriziominardo.github.io/
