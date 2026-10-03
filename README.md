@@ -2,7 +2,7 @@
 
 💻 **Analista IT | Análisis Funcional y Procesos | SQL**
 
-Recibido de Analista de Sistemas y con experiencia trabajando dentro de operaciones y negocios.
+Recibido de Analista de Sistemas, con experiencia en distintas áreas, principalmente en el rubro de salud.
 
 Me enfoco en entender qué necesita el negocio, cómo afecta un problema a quienes participan del proceso y buscar soluciones funcionales y eficientes.
 
